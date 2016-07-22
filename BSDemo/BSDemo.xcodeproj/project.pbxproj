@@ -20,14 +20,10 @@
 		2558D3FB1D37690B00013F26 /* RightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2558D3F91D37690B00013F26 /* RightModel.m */; };
 		2558D3FF1D37693500013F26 /* AttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2558D3FD1D37693500013F26 /* AttentionViewController.m */; };
 		2558D4001D37693500013F26 /* AttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2558D3FE1D37693500013F26 /* AttentionViewController.xib */; };
-		256429ED1D3E041900C0E190 /* WHTAllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256429EC1D3E041900C0E190 /* WHTAllTableViewController.m */; };
-		256429F01D3E042D00C0E190 /* WHTVideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256429EF1D3E042D00C0E190 /* WHTVideoTableViewController.m */; };
-		256429F31D3E044100C0E190 /* WHTPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256429F21D3E044100C0E190 /* WHTPictureTableViewController.m */; };
-		256429F61D3E045500C0E190 /* WHTWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256429F51D3E045500C0E190 /* WHTWordTableViewController.m */; };
-		256429F91D3E048100C0E190 /* WHTVicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256429F81D3E048100C0E190 /* WHTVicTableViewController.m */; };
 		257F1BD91D3CD43D00C238AE /* WHTGudieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 257F1BD81D3CD43D00C238AE /* WHTGudieView.m */; };
 		257F1BDB1D3CD45400C238AE /* WHTGudieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257F1BDA1D3CD45400C238AE /* WHTGudieView.xib */; };
 		25CC7D771D40ABB600C06351 /* NSDate+WHTComperDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CC7D761D40ABB600C06351 /* NSDate+WHTComperDate.m */; };
+		25D7800B1D41EE67009717FF /* WHTSubEssenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D7800A1D41EE67009717FF /* WHTSubEssenceTableViewController.m */; };
 		25EA59FA1D3F5F9C0063B247 /* WHTEssenceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EA59F81D3F5F9C0063B247 /* WHTEssenceTableViewCell.m */; };
 		25EA59FB1D3F5F9C0063B247 /* WHTEssenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25EA59F91D3F5F9C0063B247 /* WHTEssenceTableViewCell.xib */; };
 		25F80D7D1D35E41C00AE2B69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F80D7C1D35E41C00AE2B69 /* main.m */; };
@@ -74,21 +70,13 @@
 		2558D3FC1D37693500013F26 /* AttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionViewController.h; sourceTree = "<group>"; };
 		2558D3FD1D37693500013F26 /* AttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionViewController.m; sourceTree = "<group>"; };
 		2558D3FE1D37693500013F26 /* AttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttentionViewController.xib; sourceTree = "<group>"; };
-		256429EB1D3E041900C0E190 /* WHTAllTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTAllTableViewController.h; sourceTree = "<group>"; };
-		256429EC1D3E041900C0E190 /* WHTAllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTAllTableViewController.m; sourceTree = "<group>"; };
-		256429EE1D3E042D00C0E190 /* WHTVideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTVideoTableViewController.h; sourceTree = "<group>"; };
-		256429EF1D3E042D00C0E190 /* WHTVideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTVideoTableViewController.m; sourceTree = "<group>"; };
-		256429F11D3E044100C0E190 /* WHTPictureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTPictureTableViewController.h; sourceTree = "<group>"; };
-		256429F21D3E044100C0E190 /* WHTPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTPictureTableViewController.m; sourceTree = "<group>"; };
-		256429F41D3E045500C0E190 /* WHTWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTWordTableViewController.h; sourceTree = "<group>"; };
-		256429F51D3E045500C0E190 /* WHTWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTWordTableViewController.m; sourceTree = "<group>"; };
-		256429F71D3E048100C0E190 /* WHTVicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTVicTableViewController.h; sourceTree = "<group>"; };
-		256429F81D3E048100C0E190 /* WHTVicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTVicTableViewController.m; sourceTree = "<group>"; };
 		257F1BD71D3CD43D00C238AE /* WHTGudieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTGudieView.h; sourceTree = "<group>"; };
 		257F1BD81D3CD43D00C238AE /* WHTGudieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTGudieView.m; sourceTree = "<group>"; };
 		257F1BDA1D3CD45400C238AE /* WHTGudieView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHTGudieView.xib; sourceTree = "<group>"; };
 		25CC7D751D40ABB600C06351 /* NSDate+WHTComperDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WHTComperDate.h"; sourceTree = "<group>"; };
 		25CC7D761D40ABB600C06351 /* NSDate+WHTComperDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WHTComperDate.m"; sourceTree = "<group>"; };
+		25D780091D41EE67009717FF /* WHTSubEssenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTSubEssenceTableViewController.h; sourceTree = "<group>"; };
+		25D7800A1D41EE67009717FF /* WHTSubEssenceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTSubEssenceTableViewController.m; sourceTree = "<group>"; };
 		25EA59F71D3F5F9C0063B247 /* WHTEssenceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTEssenceTableViewCell.h; sourceTree = "<group>"; };
 		25EA59F81D3F5F9C0063B247 /* WHTEssenceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTEssenceTableViewCell.m; sourceTree = "<group>"; };
 		25EA59F91D3F5F9C0063B247 /* WHTEssenceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHTEssenceTableViewCell.xib; sourceTree = "<group>"; };
@@ -212,16 +200,8 @@
 		256429FA1D3E097A00C0E190 /* 顶部标签表视图 */ = {
 			isa = PBXGroup;
 			children = (
-				256429EB1D3E041900C0E190 /* WHTAllTableViewController.h */,
-				256429EC1D3E041900C0E190 /* WHTAllTableViewController.m */,
-				256429EE1D3E042D00C0E190 /* WHTVideoTableViewController.h */,
-				256429EF1D3E042D00C0E190 /* WHTVideoTableViewController.m */,
-				256429F11D3E044100C0E190 /* WHTPictureTableViewController.h */,
-				256429F21D3E044100C0E190 /* WHTPictureTableViewController.m */,
-				256429F41D3E045500C0E190 /* WHTWordTableViewController.h */,
-				256429F51D3E045500C0E190 /* WHTWordTableViewController.m */,
-				256429F71D3E048100C0E190 /* WHTVicTableViewController.h */,
-				256429F81D3E048100C0E190 /* WHTVicTableViewController.m */,
+				25D780091D41EE67009717FF /* WHTSubEssenceTableViewController.h */,
+				25D7800A1D41EE67009717FF /* WHTSubEssenceTableViewController.m */,
 			);
 			name = "顶部标签表视图";
 			sourceTree = "<group>";
@@ -554,11 +534,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2558D3F11D3768E800013F26 /* LeftTableViewCell.m in Sources */,
-				256429F31D3E044100C0E190 /* WHTPictureTableViewController.m in Sources */,
 				25CC7D771D40ABB600C06351 /* NSDate+WHTComperDate.m in Sources */,
 				25F80D831D35E41C00AE2B69 /* ViewController.m in Sources */,
 				2558D3FA1D37690B00013F26 /* LeftModel.m in Sources */,
-				256429F01D3E042D00C0E190 /* WHTVideoTableViewController.m in Sources */,
 				2558D3FB1D37690B00013F26 /* RightModel.m in Sources */,
 				25F80D9E1D361AB000AE2B69 /* WHTNewViewController.m in Sources */,
 				25F80D991D361A9C00AE2B69 /* WHTEssenceViewController.m in Sources */,
@@ -568,10 +546,8 @@
 				252E45F61D3C6A23000CFD4A /* WHTPublishViewController.m in Sources */,
 				25F80DAC1D36262000AE2B69 /* WHTTabBar.m in Sources */,
 				25FD2C481D40918D004D743D /* WHTEssenceModel.m in Sources */,
-				256429F61D3E045500C0E190 /* WHTWordTableViewController.m in Sources */,
+				25D7800B1D41EE67009717FF /* WHTSubEssenceTableViewController.m in Sources */,
 				25EA59FA1D3F5F9C0063B247 /* WHTEssenceTableViewCell.m in Sources */,
-				256429F91D3E048100C0E190 /* WHTVicTableViewController.m in Sources */,
-				256429ED1D3E041900C0E190 /* WHTAllTableViewController.m in Sources */,
 				25F80DB81D36314200AE2B69 /* UIView+ZRCategory.m in Sources */,
 				2558D3E41D37333E00013F26 /* WHTNavigationViewController.m in Sources */,
 				25F80DA31D361ACD00AE2B69 /* WHTFriendViewController.m in Sources */,
@@ -695,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = "/Users/etcxm/Desktop/第三阶段/课后练习/BSDemo/BSDemo/WHTPrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/etcxm/Documents/WHTEdit/BSDemo/BSDemo/WHTPrefixHeader.pch;
 				INFOPLIST_FILE = BSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.izh.BSDemo;
@@ -710,7 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = "/Users/etcxm/Desktop/第三阶段/课后练习/BSDemo/BSDemo/WHTPrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/etcxm/Documents/WHTEdit/BSDemo/BSDemo/WHTPrefixHeader.pch;
 				INFOPLIST_FILE = BSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.izh.BSDemo;

@@ -43,11 +43,16 @@
 //是不是昨天
 - (BOOL)isYesterDay;
 {
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd";
+    
+    NSDate *nowDate = [fmt dateFromString:[fmt stringFromDate:[NSDate date]]];
+    NSDate *selfDate = [fmt dateFromString:[fmt stringFromDate:self]];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
     NSCalendarUnit unit = NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay;
     
-    NSDateComponents *comps = [calendar components:unit fromDate:self toDate:[NSDate date] options:0];
+    NSDateComponents *comps = [calendar components:unit fromDate:selfDate toDate:nowDate options:0];
     
     return comps.year == 0 && comps.month == 0 && comps.day == 1;
     

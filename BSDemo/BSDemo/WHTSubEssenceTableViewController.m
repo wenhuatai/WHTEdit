@@ -6,14 +6,14 @@
 //  Copyright © 2016年 etcxm. All rights reserved.
 //
 
-#import "WHTWordTableViewController.h"
+#import "WHTSubEssenceTableViewController.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
 
 #import "WHTEssenceTableViewCell.h"
 #import "WHTEssenceModel.h"
-@interface WHTWordTableViewController ()
+@interface WHTSubEssenceTableViewController ()
 {
 }
 //  段子的数组内容
@@ -29,7 +29,7 @@
 
 @end
 static NSString *identifier = @"wordcell";
-@implementation WHTWordTableViewController
+@implementation WHTSubEssenceTableViewController
 - (NSMutableArray *)topicArry
 {
     if (_topicArry == nil) {
@@ -65,11 +65,11 @@ static NSString *identifier = @"wordcell";
 - (void)setUpTableView
 {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    
     self.tableView.backgroundColor = WHTRGB(237, 237, 237);
     
     //    注册cell
-        [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WHTEssenceTableViewCell class]) bundle:nil] forCellReuseIdentifier:identifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WHTEssenceTableViewCell class]) bundle:nil] forCellReuseIdentifier:identifier];
     
 }
 - (void)loadNewTopicData //新的数据
@@ -82,9 +82,9 @@ static NSString *identifier = @"wordcell";
     NSString *url = @"http://api.budejie.com/api/api_open.php";
     //   2、参数
     NSMutableDictionary *theParserDic = [NSMutableDictionary dictionary];
-    theParserDic[@"a"] = @"newlist";
+    theParserDic[@"a"] = @"list";
     theParserDic[@"c"] = @"data";
-    theParserDic[@"type"] = @"29";
+    theParserDic[@"type"] = self.type;
     self.parserDic = theParserDic;
     
     //   3、发送请求
@@ -105,7 +105,7 @@ static NSString *identifier = @"wordcell";
         NSArray *arry = [responseObject objectForKey:@"list"];
         //        数组字典------》 数组模型
         [self.topicArry removeAllObjects];
-//        self.topicArry = [NSMutableArray arrayWithArray:arry];
+        //        self.topicArry = [NSMutableArray arrayWithArray:arry];
         self.topicArry  = [WHTEssenceModel mj_objectArrayWithKeyValuesArray:arry];
         
         //       下拉刷新 页数为0
@@ -130,9 +130,9 @@ static NSString *identifier = @"wordcell";
     
     NSString *url = @"http://api.budejie.com/api/api_open.php";
     NSMutableDictionary *theParserDic = [NSMutableDictionary dictionary];
-    theParserDic[@"a"] = @"newlist";
+    theParserDic[@"a"] = @"list";
     theParserDic[@"c"] = @"data";
-    theParserDic[@"type"] = @"29";
+    theParserDic[@"type"] = self.type;
     NSInteger page = self.page;
     theParserDic[@"page"] = @(page++);
     theParserDic[@"maxtime"] = self.maxtime;  //第二页 用一页的maxtime
@@ -157,8 +157,8 @@ static NSString *identifier = @"wordcell";
         //        获取list的数据
         NSArray *arry = [responseObject objectForKey:@"list"];
         //        数组字典------》 数组模型
-
-//        self.topicArry = [NSMutableArray arrayWithArray:arry];
+        
+        //        self.topicArry = [NSMutableArray arrayWithArray:arry];
         NSArray *modelArry = [WHTEssenceModel mj_objectArrayWithKeyValuesArray:arry];
         
         //        把新数据 加入到 旧数据的数组后面
@@ -197,9 +197,9 @@ static NSString *identifier = @"wordcell";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     WHTEssenceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-
+    
     cell.model = self.topicArry[indexPath.row];
     return cell;
 }
@@ -213,46 +213,46 @@ static NSString *identifier = @"wordcell";
 }
 /*
  // Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

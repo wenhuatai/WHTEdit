@@ -7,12 +7,9 @@
 //
 
 #import "WHTEssenceViewController.h"
-#import "WHTAllTableViewController.h"
-#import "WHTVideoTableViewController.h"
-#import "WHTPictureTableViewController.h"
-#import "WHTWordTableViewController.h"
-#import "WHTVicTableViewController.h"
 
+
+#import "WHTSubEssenceTableViewController.h"
 
 @interface WHTEssenceViewController ()<UIScrollViewDelegate>
 {}
@@ -38,38 +35,31 @@
     [self setUpChildViewCtr];
     [self setUpTopView];
     [self setUpScrollContentView];
- 
-    
-    
-    
-   
-    
-    
-    
-
     
 }
 
 #pragma maerk 设置顶部视图子视图
 - (void)setUpChildViewCtr
 {
-    WHTAllTableViewController *allCtr = [[WHTAllTableViewController alloc]init];
+    WHTSubEssenceTableViewController *allCtr = [[WHTSubEssenceTableViewController alloc]init];
+    allCtr.type = @"1";
     [self addChildViewController:allCtr];
     
-    WHTVideoTableViewController *videoCtr = [[WHTVideoTableViewController alloc]init];
+    WHTSubEssenceTableViewController *videoCtr = [[WHTSubEssenceTableViewController alloc]init];
+    videoCtr.type = @"41";
     [self addChildViewController:videoCtr];
     
-    WHTPictureTableViewController *pictureCtr = [[WHTPictureTableViewController alloc]init];
+    WHTSubEssenceTableViewController *pictureCtr = [[WHTSubEssenceTableViewController alloc]init];
+    pictureCtr.type = @"10";
     [self addChildViewController:pictureCtr];
     
-    WHTWordTableViewController *wordCtr = [[WHTWordTableViewController alloc]init];
+    WHTSubEssenceTableViewController *wordCtr = [[WHTSubEssenceTableViewController alloc]init];
+    wordCtr.type = @"29";
     [self addChildViewController:wordCtr];
     
-    WHTVicTableViewController *vicCtr = [[WHTVicTableViewController alloc]init];
+    WHTSubEssenceTableViewController *vicCtr = [[WHTSubEssenceTableViewController alloc]init];
+    vicCtr.type = @"31";
     [self addChildViewController:vicCtr];
-
-
-
 }
 
 #pragma maerk 设置导航栏
