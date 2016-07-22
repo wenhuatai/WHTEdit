@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, "7.0"
+
+target :"BSDemo" do
+
+pod "AFNetworking"
+pod "SDWebImage"
+pod "MJExtension"
+pod "MJRefresh"
+pod "SVProgressHUD"
+pod "pop"
+
+
+end

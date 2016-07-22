@@ -1,0 +1,32 @@
+//
+//  WHTPrefixHeader.pch
+//  BSDemo
+//
+//  Created by etcxm on 16/7/13.
+//  Copyright © 2016年 etcxm. All rights reserved.
+//
+
+#ifndef WHTPrefixHeader_pch
+#define WHTPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+ZRCategory.h"
+#import "UIBarButtonItem+WHTButtonItem.h"
+
+
+
+#ifdef DEBUG
+#define WHTLog(...)  NSLog(__VA_ARGS__)
+#else
+#define WHTLog(...)
+#endif
+
+#define  WHTFuncLog   WHTLog(@"%s",__func__)
+#define WHTRGB(R,G,B) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:1.0]
+
+#define Screen_width [UIScreen mainScreen].bounds.size.width
+#define Screen_height [UIScreen mainScreen].bounds.size.height
+
+#endif /* WHTPrefixHeader_pch */
