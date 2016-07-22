@@ -1,2 +1,2 @@
-# WHTEdit
-这是一个提示框架
+# WHTBSDemo
+这是一个仿百思不得姐的UI界面。
